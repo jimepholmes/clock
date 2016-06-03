@@ -19,19 +19,19 @@ function test2(){
     //groupHoriz(4);
     //all1Vert();
     //groupSquare(4);
-    //groupDiagAll();
+    //groupDiagAll(true);
     //groupSquareOneHit(5, 90, 180, 270, 180, 90, 0, 270, 0, 2000);
-    //groupAll(1000, 0);
+    groupAll(1000, 0, true);
     //groupCircle(4, 2000, 0);
-    groupCircleAll(2000, 0);
+    //groupCircleAll(2000, 0, true);
 }
 
 function test3(){
-    //groupDiagOutAll();
+    //groupDiagOutAll(true);
     //groupOutSquare(4);
-    //groupOutAll(1000, 0);
+    groupOutAll(1000, 0, true);
     //groupOutCircle(4, 2000, 0);
-    groupOutCircleAll(2000, 0);
+    //groupOutCircleAll(2000, 0, true);
 }
 
 function animate(elId, animateTo, duration, easing, rndDurationSeed){
@@ -55,6 +55,14 @@ function hand(id, positionInGroup, group, tempFigurePosition, tempFigureName, di
     this.divId = divId;
     this.tempFigurePosition = tempFigurePosition;  //this is used for when the item is being configured with other items to form a figure
     this.tempFigureName = tempFigureName;  //this is used for when the item is being configured with other items to form a figure
+}
+
+function clearHandArray(){
+    //loop through the array and clear all of the temporary values
+    for (var i=0; i<=handArray.length-1; i++){
+        handArray[i].tempFigureName = "";
+        handArray[i].tempFigurePosition = "";
+    }
 }
 
 function populateArrays(){
@@ -195,6 +203,9 @@ function showTime(){
         intDig4 = String(d.getMinutes()).substr(1, 1);
     }
 
+    //clear the current values
+    clearHandArray();
+
     showDigit(intDig1, 18, "digitPos1", 45);
     showDigit(intDig2, 21, "digitPos2", 45);
     showDigit(intDig3, 25, "digitPos3", 45);
@@ -239,39 +250,93 @@ function showDigit(intDigit, intStartAt, digitPos, defaultPos) {
 }
 
 
-function allHoriz(){
+function allHoriz(ignoreFigures){
     clearInterval(intInterval);
+    var boolSkip = false;
 
     for (var i=0; i<=handArray.length-1; i++){
-            if (handArray[i].divId === "container"){
-                $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
-            }else{
-                $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+        boolSkip = false;
+        //if there are figures drawn and we want to retain them, ignore any clocks that have are part of a figure
+        if (ignoreFigures===true){
+            if (handArray[i].tempFigurePosition != ""){
+                boolSkip = true;
             }
-    }
-}
-
-function allVert(){
-    clearInterval(intInterval);
-
-    for (var i=0; i<=handArray.length-1; i++){
-        if (handArray[i].divId === "container"){
-            $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
-        }else{
-            $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+        }
+        if (!boolSkip) {
+            if (handArray[i].divId === "container") {
+                $("#hand" + i).rotate({
+                    animateTo: 90,
+                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + i).rotate({
+                    animateTo: 270,
+                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
         }
     }
 }
 
-function groupHoriz(intGroup){
+function allVert(ignoreFigures){
     clearInterval(intInterval);
+    var boolSkip = false;
 
     for (var i=0; i<=handArray.length-1; i++){
-        if (handArray[i].group === intGroup) {
-            if (handArray[i].divId === "container"){
-                $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
-            }else{
-                $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+        boolSkip = false;
+        //if there are figures drawn and we want to retain them, ignore any clocks that have are part of a figure
+        if (ignoreFigures===true){
+            if (handArray[i].tempFigurePosition != ""){
+                boolSkip = true;
+            }
+        }
+        if (!boolSkip) {
+            if (handArray[i].divId === "container") {
+                $("#hand" + i).rotate({
+                    animateTo: 0,
+                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + i).rotate({
+                    animateTo: 180,
+                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
+        }
+    }
+}
+
+function groupHoriz(intGroup, ignoreFigures){
+    clearInterval(intInterval);
+    var boolSkip = false;
+
+    for (var i=0; i<=handArray.length-1; i++){
+        boolSkip = false;
+        //if there are figures drawn and we want to retain them, ignore any clocks that have are part of a figure
+        if (ignoreFigures===true){
+            if (handArray[i].tempFigurePosition != ""){
+                boolSkip = true;
+            }
+        }
+        if (!boolSkip) {
+            if (handArray[i].group === intGroup) {
+                if (handArray[i].divId === "container") {
+                    $("#hand" + i).rotate({
+                        animateTo: 0,
+                        duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                        easing: $.easing.easeInOutSine
+                    })
+                } else {
+                    $("#hand" + i).rotate({
+                        animateTo: 180,
+                        duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                        easing: $.easing.easeInOutSine
+                    })
+                }
             }
         }
     }
