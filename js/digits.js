@@ -39,8 +39,7 @@ function configureDigit(intStartAt, figureName){
 }
 
 
-
-function digit0(intStartAt, digitPos, defaultUnused){
+function digit0(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -48,130 +47,129 @@ function digit0(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
+                        //animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -183,108 +181,120 @@ function digit0(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit1(intStartAt, digitPos, defaultUnused){
+function digit1(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
         if (handArray[i].tempFigureName === digitPos){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 16:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -296,7 +306,7 @@ function digit1(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit2(intStartAt, digitPos, defaultUnused){
+function digit2(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -304,130 +314,130 @@ function digit2(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -439,7 +449,7 @@ function digit2(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit3(intStartAt, digitPos, defaultUnused){
+function digit3(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -447,130 +457,129 @@ function digit3(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -582,7 +591,7 @@ function digit3(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit4(intStartAt, digitPos, defaultUnused){
+function digit4(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -590,120 +599,122 @@ function digit4(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 13:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 16:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -715,7 +726,7 @@ function digit4(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit5(intStartAt, digitPos, defaultUnused){
+function digit5(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -723,130 +734,129 @@ function digit5(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -858,7 +868,7 @@ function digit5(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit6(intStartAt, digitPos, defaultUnused){
+function digit6(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -866,130 +876,135 @@ function digit6(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -1001,7 +1016,7 @@ function digit6(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit7(intStartAt, digitPos, defaultUnused){
+function digit7(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -1009,110 +1024,116 @@ function digit7(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 13:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
-
                 case 16:
+                    handArray[i].tempFigurePosition = "";
+                    handArray[i].tempFigureName = "";
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -1124,7 +1145,7 @@ function digit7(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit8(intStartAt, digitPos, defaultUnused){
+function digit8(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -1132,63 +1153,63 @@ function digit8(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
                         $("#hand" + i).rotate({ animateTo:145,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
                         $("#hand" + i).rotate({ animateTo:215,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
                     }
@@ -1197,65 +1218,65 @@ function digit8(intStartAt, digitPos, defaultUnused){
                     if (handArray[i].divId === "container"){
                         $("#hand" + i).rotate({ animateTo:45,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
                         $("#hand" + i).rotate({ animateTo:315,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:
@@ -1267,7 +1288,7 @@ function digit8(intStartAt, digitPos, defaultUnused){
 }
 
 
-function digit9(intStartAt, digitPos, defaultUnused){
+function digit9(intStartAt, digitPos, duration, rndSeed){
     configureDigit(intStartAt, digitPos);
 
     for (var i=0; i<=handArray.length-1; i++){
@@ -1275,130 +1296,130 @@ function digit9(intStartAt, digitPos, defaultUnused){
             switch(handArray[i].tempFigurePosition) {
                 case 1:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 2:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 3:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 4:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 5:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 6:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 7:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 8:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 9:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 10:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 11:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 12:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 13:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 14:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 15:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:180,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 180, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
 
                 case 16:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 17:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:90,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 90, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 case 18:
                     if (handArray[i].divId === "container"){
-                        $("#hand" + i).rotate({ animateTo:0,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 0, duration, $.easing.easeInOutSine, rndSeed);
                     }else{
-                        $("#hand" + i).rotate({ animateTo:270,duration:2000 + Math.floor(Math.random() * 2000) + 1,easing: $.easing.easeInOutSine })
+                        animate("#hand" + i, 270, duration, $.easing.easeInOutSine, rndSeed);
                     }
                     break;
                 default:

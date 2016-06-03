@@ -5,10 +5,22 @@ var intInterval;
 var handArray = [];
 var intAbsGroupCounter = 1;
 
+function hand(id, positionInGroup, group, tempFigurePosition, tempFigureName, divId) {
+    this.id = id;
+    this.positionInGroup = positionInGroup;
+    this.group = group;
+    this.divId = divId;
+    this.tempFigurePosition = tempFigurePosition;  //this is used for when the item is being configured with other items to form a figure
+    this.tempFigureName = tempFigureName;  //this is used for when the item is being configured with other items to form a figure
+}
+
+
 $( document ).ready(function() {
     populateArrays();
     addHandsToPage();
 });
+
+
 
 
 function test1(){
@@ -48,14 +60,6 @@ function animate(elId, animateTo, duration, easing, rndDurationSeed){
     )
 }
 
-function hand(id, positionInGroup, group, tempFigurePosition, tempFigureName, divId) {
-    this.id = id;
-    this.positionInGroup = positionInGroup;
-    this.group = group;
-    this.divId = divId;
-    this.tempFigurePosition = tempFigurePosition;  //this is used for when the item is being configured with other items to form a figure
-    this.tempFigureName = tempFigureName;  //this is used for when the item is being configured with other items to form a figure
-}
 
 function clearHandArray(){
     //loop through the array and clear all of the temporary values
@@ -184,7 +188,7 @@ function stop() {
 }
 
 
-function showTime(){
+function showTime(duration, rndSeed){
     var d = new Date();
     var intDig1 = 0;
     var intDig2 = 0;
@@ -206,43 +210,43 @@ function showTime(){
     //clear the current values
     clearHandArray();
 
-    showDigit(intDig1, 18, "digitPos1", 45);
-    showDigit(intDig2, 21, "digitPos2", 45);
-    showDigit(intDig3, 25, "digitPos3", 45);
-    showDigit(intDig4, 28, "digitPos4", 45);
+    showDigit(intDig1, 18, "digitPos1", duration,rndSeed);
+    showDigit(intDig2, 21, "digitPos2", duration, rndSeed);
+    showDigit(intDig3, 25, "digitPos3", duration, rndSeed);
+    showDigit(intDig4, 28, "digitPos4", duration, rndSeed);
 }
 
-function showDigit(intDigit, intStartAt, digitPos, defaultPos) {
+function showDigit(intDigit, intStartAt, digitPos, duration, rndSeed) {
     switch (String(intDigit)) {
         case "0":
-            digit0(intStartAt, digitPos, defaultPos);
+            digit0(intStartAt, digitPos, duration, rndSeed);
             break;
         case "1":
-            digit1(intStartAt, digitPos, defaultPos);
+            digit1(intStartAt, digitPos, duration, rndSeed);
             break;
         case "2":
-            digit2(intStartAt, digitPos, defaultPos);
+            digit2(intStartAt, digitPos, duration, rndSeed);
             break;
         case "3":
-            digit3(intStartAt, digitPos, defaultPos);
+            digit3(intStartAt, digitPos, duration, rndSeed);
             break;
         case "4":
-            digit4(intStartAt, digitPos, defaultPos);
+            digit4(intStartAt, digitPos, duration, rndSeed);
             break;
         case "5":
-            digit5(intStartAt, digitPos, defaultPos);
+            digit5(intStartAt, digitPos, duration, rndSeed);
             break;
         case "6":
-            digit6(intStartAt, digitPos, defaultPos);
+            digit6(intStartAt, digitPos, rndSeed);
             break;
         case "7":
-            digit7(intStartAt, digitPos, defaultPos);
+            digit7(intStartAt, digitPos, rndSeed);
             break;
         case "8":
-            digit8(intStartAt, digitPos, defaultPos);
+            digit8(intStartAt, digitPos, rndSeed);
             break;
         case "9":
-            digit9(intStartAt, digitPos, defaultPos);
+            digit9(intStartAt, digitPos, rndSeed);
             break;
         default:
             break;
