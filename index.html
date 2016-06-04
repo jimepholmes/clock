@@ -11,21 +11,29 @@
     <script src="js/digits.js"></script>
     <script src="js/squares.js"></script>
     <script src="js/circle.js"></script>
+    <script src="js/fold.js"></script>
     <script src="js/clock.js"></script>
 </head>
 
-<div id="container" style="position:absolute; top:7px; left:7px; width:800px; height:600px;"></div>
+<div id="container" style="position:absolute; top:7px; left:7px; width:840px; height:600px;"></div>
 
-<div id="container2" style="position:absolute; top:7px; left:7px; width:800px; height:600px;"></div>
+<div id="container2" style="position:absolute; top:7px; left:7px; width:840px; height:600px;"></div>
 
-<div id="controlBox" style="position:absolute; top:7px; right:200px; width:200px; height:600px; border:solid 1px yellow">
+<div id="controlBox" style="position:absolute; top:7px; right:100px; width:200px; height:600px; border:solid 1px yellow">
+    <a href="javascript:runSequence()">[start sequence]</a><br><br>
     <a href="javascript:startRandom()">[start random]</a><br>
     <a href="javascript:stop()">[stop]</a><br><br>
-    <a href="javascript:test1()">[test]</a><br>
-    <a href="javascript:test2()">[test2]</a><br>
-    <a href="javascript:test3()">[test3]</a><br>
-    <a href="javascript:allHoriz(true)">[all horiz]</a><br>
-    <a href="javascript:allVert(true)">[all vert]</a>
+
+    <a href="javascript:showTime(2000, 0)">[clock]</a><br>
+    <a href="javascript:groupDiagAll(true)">[diag]</a><br>
+    <a href="javascript:groupDiagOutAll(true)">[diag]</a><br>
+    <a href="javascript:groupCircleAll(2000, 500, true)">[circle]</a><br>
+    <a href="javascript:groupOutCircleAll(2000, 500, true)">[circle]</a><br>
+    <a href="javascript:groupAll(2000, 500, true)">[square]</a><br>
+    <a href="javascript:groupOutAll(2000, 500, true)">[square]</a><br>
+
+    <a href="javascript:allHoriz(false, 1000, 0)">[all horiz]</a><br>
+    <a href="javascript:allVert(false, 1000, 0)">[all vert]</a>
 
 </div>
 

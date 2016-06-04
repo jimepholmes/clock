@@ -20,8 +20,87 @@ $( document ).ready(function() {
     addHandsToPage();
 });
 
+/***************************************************************************************************************************
+ * SEQUENCE START
+ /***************************************************************************************************************************/
+var functions = []
+functions.push ("horiz()");
+functions.push ("vert()");
+functions.push ("square()");
+functions.push ("squareOut()");
+functions.push ("time()");
+functions.push ("circle()");
+functions.push ("circleOut()");
+functions.push ("diag()");
+functions.push ("diagOut()");
+functions.push ("fold()");
+functions.push ("foldOut()");
 
 
+function runSequence(){
+    eval(functions[Math.floor(Math.random() * functions.length)]);
+    setTimeout(runSequence, 5000);
+
+}
+function horiz(){
+    allHoriz(getRandomBool(), 2000, Math.floor(Math.random() * 2000) + 1);
+    //setTimeout(vert, 5000);
+}
+function vert(){
+    allVert(getRandomBool(), 2000, Math.floor(Math.random() * 2000) + 1);
+    //setTimeout(square, 5000);
+}
+function square(){
+    groupAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(squareOut, 5000);
+}
+function squareOut(){
+    groupOutAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(time, 5000);
+}
+function circle(){
+    groupCircle(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(squareOut, 5000);
+}
+function circleOut(){
+    groupCircleAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(time, 5000);
+}
+function diag(){
+    groupDiagAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(squareOut, 5000);
+}
+function diagOut(){
+    groupDiagOutAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(time, 5000);
+}
+function fold(){
+    groupFoldAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(squareOut, 5000);
+}
+function foldOut(){
+    groupOutFoldAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
+    //setTimeout(time, 5000);
+}
+function time(){
+    showTime(2000, 0);
+    //setTimeout(runSequence, 5000);
+}
+
+
+/***************************************************************************************************************************
+ * SEQUENCE END
+ /***************************************************************************************************************************/
+
+
+function getRandomBool(){
+    if (Math.floor(Math.random() * 100) <50){
+        return true;
+    }else{
+        clearHandArray();
+        return false;
+    }
+}
 
 function test1(){
     showTime();
@@ -162,12 +241,11 @@ function addHandsToPage(){
     for (var i=0; i<=handArray.length-1; i++){
         element = document.createElement("div");
         element.className = "hand";
-        element.innerHTML = '<img id="hand' + i + '"  src="img/hand2.png" posInGrp="' + handArray[i].positionInGroup + '" width="58px" height="58px">';
-        //element.appendChild(document.createTextNode('<img id="hand' + i + '"  src="img/hand.png">'));
+        //element.innerHTML = '<img id="hand' + i + '"  src="img/hand2.png" posInGrp="' + handArray[i].positionInGroup + '" width="58px" height="58px">';
+        element.innerHTML = '<img id="hand' + i + '"  src="img/hand2.png" posInGrp="' + handArray[i].positionInGroup + '" class="handImg">';
         document.getElementById(handArray[i].divId).appendChild(element);
     }
 }
-
 
 function rotateHands(moveTo, duration){
     for (var i=0; i<=handArray.length-1; i++){
@@ -186,7 +264,6 @@ function startRandom(){
 function stop() {
     clearInterval(intInterval);
 }
-
 
 function showTime(duration, rndSeed){
     var d = new Date();
@@ -207,10 +284,9 @@ function showTime(duration, rndSeed){
         intDig4 = String(d.getMinutes()).substr(1, 1);
     }
 
-    //clear the current values
     clearHandArray();
 
-    showDigit(intDig1, 18, "digitPos1", duration,rndSeed);
+    showDigit(intDig1, 18, "digitPos1", duration, rndSeed);
     showDigit(intDig2, 21, "digitPos2", duration, rndSeed);
     showDigit(intDig3, 25, "digitPos3", duration, rndSeed);
     showDigit(intDig4, 28, "digitPos4", duration, rndSeed);
@@ -237,24 +313,23 @@ function showDigit(intDigit, intStartAt, digitPos, duration, rndSeed) {
             digit5(intStartAt, digitPos, duration, rndSeed);
             break;
         case "6":
-            digit6(intStartAt, digitPos, rndSeed);
+            digit6(intStartAt, digitPos, duration, rndSeed);
             break;
         case "7":
-            digit7(intStartAt, digitPos, rndSeed);
+            digit7(intStartAt, digitPos, duration, rndSeed);
             break;
         case "8":
-            digit8(intStartAt, digitPos, rndSeed);
+            digit8(intStartAt, digitPos, duration, rndSeed);
             break;
         case "9":
-            digit9(intStartAt, digitPos, rndSeed);
+            digit9(intStartAt, digitPos, duration, rndSeed);
             break;
         default:
             break;
     }
 }
 
-
-function allHoriz(ignoreFigures){
+function allHoriz(ignoreFigures, duration, rndSeed){
     clearInterval(intInterval);
     var boolSkip = false;
 
@@ -270,13 +345,13 @@ function allHoriz(ignoreFigures){
             if (handArray[i].divId === "container") {
                 $("#hand" + i).rotate({
                     animateTo: 90,
-                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine
                 })
             } else {
                 $("#hand" + i).rotate({
                     animateTo: 270,
-                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine
                 })
             }
@@ -284,7 +359,7 @@ function allHoriz(ignoreFigures){
     }
 }
 
-function allVert(ignoreFigures){
+function allVert(ignoreFigures, duration, rndSeed){
     clearInterval(intInterval);
     var boolSkip = false;
 
@@ -300,13 +375,13 @@ function allVert(ignoreFigures){
             if (handArray[i].divId === "container") {
                 $("#hand" + i).rotate({
                     animateTo: 0,
-                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine
                 })
             } else {
                 $("#hand" + i).rotate({
                     animateTo: 180,
-                    duration: 2000 + Math.floor(Math.random() * 2000) + 1,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine
                 })
             }
@@ -345,8 +420,6 @@ function groupHoriz(intGroup, ignoreFigures){
         }
     }
 }
-
-
 
 function all1Vert(){
     //move all position 1 to vertical
