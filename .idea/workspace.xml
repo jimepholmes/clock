@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96414092-fd69-46e7-b61a-c6e24f2c42a3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/fold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/clock.css" afterPath="$PROJECT_DIR$/css/clock.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/circle.js" afterPath="$PROJECT_DIR$/js/circle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/clock.js" afterPath="$PROJECT_DIR$/js/clock.js" />
     </list>
     <ignored path="clock.iws" />
@@ -28,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="digits.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="digits.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/digits.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="183" column="56" selection-start-line="183" selection-start-column="56" selection-end-line="183" selection-end-column="56" />
+            <state relative-caret-position="32">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               <folding>
                 <element signature="n#!!block;n#digit0#0" expanded="false" />
                 <element signature="n#!!block;n#digit1#0" expanded="false" />
@@ -65,11 +62,11 @@
       <file leaf-file-name="circle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/circle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding>
                 <element signature="n#!!block;n#groupCircleOneHit#0" expanded="false" />
-                <element signature="n#!!block;n#groupCircle#0" expanded="false" />
+                <element signature="n#!!block;n#groupCircleAll#0" expanded="false" />
                 <element signature="n#!!block;n#groupOutCircle#0" expanded="false" />
               </folding>
             </state>
@@ -88,18 +85,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clock.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clock.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/clock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#populateArrays#0" expanded="false" />
                 <element signature="n#!!block;n#rotateHands#0" expanded="false" />
                 <element signature="n#!!block;n#startRandom#0" expanded="false" />
                 <element signature="n#!!block;n#stop#0" expanded="false" />
+                <element signature="n#!!block;n#showDigit#0" expanded="false" />
                 <element signature="n#!!block;n#allHoriz#0" expanded="false" />
-                <element signature="n#!!block;n#allVert#0" expanded="false" />
                 <element signature="n#!!block;n#groupHoriz#0" expanded="false" />
                 <element signature="n#!!block;n#all1Vert#0" expanded="false" />
               </folding>
@@ -133,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#html#0;n#!!top" expanded="true" />
@@ -159,13 +155,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/diag.js" />
-        <option value="$PROJECT_DIR$/js/circle.js" />
         <option value="$PROJECT_DIR$/js/squares.js" />
         <option value="$PROJECT_DIR$/css/clock.css" />
         <option value="$PROJECT_DIR$/js/fold.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/clock.js" />
         <option value="$PROJECT_DIR$/js/digits.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/circle.js" />
+        <option value="$PROJECT_DIR$/js/clock.js" />
       </list>
     </option>
   </component>
@@ -335,12 +331,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464941849908</updated>
-      <workItem from="1465034934241" duration="4710000" />
+      <workItem from="1465034934241" duration="9326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4710000" />
+    <option name="totallyTimeSpent" value="9326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="712" extended-state="6" />
@@ -411,7 +407,7 @@
           <caret line="84" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#groupCircleOneHit#0" expanded="false" />
-            <element signature="n#!!block;n#groupCircle#0" expanded="false" />
+            <element signature="n#!!block;n#groupCircleAll#0" expanded="false" />
             <element signature="n#!!block;n#groupOutCircle#0" expanded="false" />
           </folding>
         </state>
@@ -432,12 +428,11 @@
         <state relative-caret-position="3555">
           <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#populateArrays#0" expanded="false" />
             <element signature="n#!!block;n#rotateHands#0" expanded="false" />
             <element signature="n#!!block;n#startRandom#0" expanded="false" />
             <element signature="n#!!block;n#stop#0" expanded="false" />
+            <element signature="n#!!block;n#showDigit#0" expanded="false" />
             <element signature="n#!!block;n#allHoriz#0" expanded="false" />
-            <element signature="n#!!block;n#allVert#0" expanded="false" />
             <element signature="n#!!block;n#groupHoriz#0" expanded="false" />
             <element signature="n#!!block;n#all1Vert#0" expanded="false" />
           </folding>
@@ -485,18 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/circle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#groupCircleOneHit#0" expanded="false" />
-            <element signature="n#!!block;n#groupCircle#0" expanded="false" />
-            <element signature="n#!!block;n#groupOutCircle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/fold.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -507,39 +490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/clock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#populateArrays#0" expanded="false" />
-            <element signature="n#!!block;n#rotateHands#0" expanded="false" />
-            <element signature="n#!!block;n#startRandom#0" expanded="false" />
-            <element signature="n#!!block;n#stop#0" expanded="false" />
-            <element signature="n#!!block;n#allHoriz#0" expanded="false" />
-            <element signature="n#!!block;n#allVert#0" expanded="false" />
-            <element signature="n#!!block;n#groupHoriz#0" expanded="false" />
-            <element signature="n#!!block;n#all1Vert#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/digits.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="183" column="56" selection-start-line="183" selection-start-column="56" selection-end-line="183" selection-end-column="56" />
+        <state relative-caret-position="32">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           <folding>
             <element signature="n#!!block;n#digit0#0" expanded="false" />
             <element signature="n#!!block;n#digit1#0" expanded="false" />
@@ -551,6 +505,46 @@
             <element signature="n#!!block;n#digit7#0" expanded="false" />
             <element signature="n#!!block;n#digit8#0" expanded="false" />
             <element signature="n#!!block;n#digit9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!block;n#groupCircleOneHit#0" expanded="false" />
+            <element signature="n#!!block;n#groupCircleAll#0" expanded="false" />
+            <element signature="n#!!block;n#groupOutCircle#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/clock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#rotateHands#0" expanded="false" />
+            <element signature="n#!!block;n#startRandom#0" expanded="false" />
+            <element signature="n#!!block;n#stop#0" expanded="false" />
+            <element signature="n#!!block;n#showDigit#0" expanded="false" />
+            <element signature="n#!!block;n#allHoriz#0" expanded="false" />
+            <element signature="n#!!block;n#groupHoriz#0" expanded="false" />
+            <element signature="n#!!block;n#all1Vert#0" expanded="false" />
           </folding>
         </state>
       </provider>

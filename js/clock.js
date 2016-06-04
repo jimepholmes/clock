@@ -4,9 +4,12 @@
 var intInterval;
 var handArray = [];
 var intAbsGroupCounter = 1;
+var intFlowCounter = 1;
 
-function hand(id, positionInGroup, group, tempFigurePosition, tempFigureName, divId) {
+function hand(id, positionInGroup, group, tempFigurePosition, tempFigureName, divId, col, row) {
     this.id = id;
+    this.col = col;
+    this.row = row;
     this.positionInGroup = positionInGroup;
     this.group = group;
     this.divId = divId;
@@ -35,56 +38,53 @@ functions.push ("diag()");
 functions.push ("diagOut()");
 functions.push ("fold()");
 functions.push ("foldOut()");
+functions.push ("horizFlow()");
+functions.push ("vertFlow()");
 
 
 function runSequence(){
     eval(functions[Math.floor(Math.random() * functions.length)]);
-    setTimeout(runSequence, 5000);
+    setTimeout(runSequence, 7500);
 
 }
+function vertFlow(){
+    actionVertFlow(false, 3000, 0);
+}
+function horizFlow(){
+    actionHorizFlow(false, 3000, 0);
+}
 function horiz(){
-    allHoriz(getRandomBool(), 2000, Math.floor(Math.random() * 2000) + 1);
-    //setTimeout(vert, 5000);
+    allHoriz(getRandomBool(), 5000, Math.floor(Math.random() * 2000) + 1);
 }
 function vert(){
-    allVert(getRandomBool(), 2000, Math.floor(Math.random() * 2000) + 1);
-    //setTimeout(square, 5000);
+    allVert(getRandomBool(), 5000, Math.floor(Math.random() * 2000) + 1);
 }
 function square(){
-    groupAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(squareOut, 5000);
+    groupAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function squareOut(){
-    groupOutAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(time, 5000);
+    groupOutAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function circle(){
-    groupCircle(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(squareOut, 5000);
+    groupCircle(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function circleOut(){
-    groupCircleAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(time, 5000);
+    groupCircleAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function diag(){
-    groupDiagAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(squareOut, 5000);
+    groupDiagAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function diagOut(){
-    groupDiagOutAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(time, 5000);
+    groupDiagOutAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function fold(){
-    groupFoldAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(squareOut, 5000);
+    groupFoldAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function foldOut(){
-    groupOutFoldAll(2000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
-    //setTimeout(time, 5000);
+    groupOutFoldAll(5000, Math.floor(Math.random() * 2000) + 1, getRandomBool())
 }
 function time(){
-    showTime(2000, 0);
-    //setTimeout(runSequence, 5000);
+    showTime(5000, 0);
 }
 
 
@@ -170,7 +170,7 @@ function populateArrays(){
             intGroupCounter = 1;
             intGroupValue = 1;
         }
-        handArray.push(new hand("hand" + i, intLocationCounter, intGroupValue, 0, "", divId));
+        handArray.push(new hand("hand" + i, intLocationCounter, intGroupValue, 0, "", divId, intRowCounter, intAbsRowCounter));
 
         intRowCounter ++;
         intLocationCounter++;
@@ -231,8 +231,8 @@ function populateArrays(){
                 intLocationCounter=3;
             }
         }
-
     }
+    console.log(handArray);
 }
 
 function addHandsToPage(){
@@ -326,6 +326,64 @@ function showDigit(intDigit, intStartAt, digitPos, duration, rndSeed) {
             break;
         default:
             break;
+    }
+}
+
+function actionHorizFlow(ignoreFigures, duration, rndSeed){
+    intFlowCounter=1;
+    intInterval = setInterval( function(){ allHorizFlow(ignoreFigures, duration, rndSeed) }, 200);
+}
+
+function allHorizFlow(ignoreFigures, duration, rndSeed){
+    for (var x=0; x<=handArray.length-1; x++){
+        if (String(handArray[x].col) === String(intFlowCounter)){
+            if (handArray[x].divId === "container") {
+                $("#hand" + x).rotate({
+                    animateTo: 90,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + x).rotate({
+                    animateTo: 270,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
+        }
+    }
+    intFlowCounter ++;
+    if (intFlowCounter>16){
+        clearInterval(intInterval);
+    }
+}
+
+function actionVertFlow(ignoreFigures, duration, rndSeed){
+    intFlowCounter=1;
+    intInterval = setInterval( function(){ allVertFlow(ignoreFigures, duration, rndSeed) }, 200);
+}
+
+function allVertFlow(ignoreFigures, duration, rndSeed){
+    for (var x=0; x<=handArray.length-1; x++){
+        if (String(handArray[x].col) === String(intFlowCounter)){
+            if (handArray[i].divId === "container") {
+                $("#hand" + i).rotate({
+                    animateTo: 0,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + i).rotate({
+                    animateTo: 180,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
+        }
+    }
+    intFlowCounter ++;
+    if (intFlowCounter>16){
+        clearInterval(intInterval);
     }
 }
 

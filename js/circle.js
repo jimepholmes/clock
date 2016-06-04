@@ -29,7 +29,6 @@ function groupOutCircleAll(dur, rndSeed, ignoreFigures){
     }
 }
 
-
 function groupCircle(intGroup, dur, rndSeed, ignoreFigures){
     var degrees = 0;
     var boolSkip = false;
@@ -87,7 +86,6 @@ function groupCircle(intGroup, dur, rndSeed, ignoreFigures){
     }
 }
 
-
 function groupOutCircle(intGroup, dur, rndSeed, ignoreFigures){
     clearInterval(intInterval);
     var boolSkip = false;
@@ -144,7 +142,3 @@ function groupOutCircle(intGroup, dur, rndSeed, ignoreFigures){
         }
     }
 }
-
-/**
- * Created by admin on 28/05/2016.
- */
