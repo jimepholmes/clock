@@ -37,15 +37,27 @@ functions.push ("circleOut()");
 functions.push ("diag()");
 functions.push ("diagOut()");
 functions.push ("fold()");
+functions.push ("time()");
 functions.push ("foldOut()");
 functions.push ("horizFlow()");
 functions.push ("vertFlow()");
+functions.push ("diagFlow()");
+functions.push ("diagOutFlow()");
 
 
 function runSequence(){
-    eval(functions[Math.floor(Math.random() * functions.length)]);
+    var funct = functions[Math.floor(Math.random() * functions.length)];
+    console.log(funct);
+    eval(funct);
     setTimeout(runSequence, 7500);
 
+}
+
+function diagFlow(){
+    actionGroupDiagFlow(false, 3000, 0);
+}
+function diagOutFlow(){
+    actionGroupDiagOutFlow(false, 3000, 0);
 }
 function vertFlow(){
     actionVertFlow(false, 3000, 0);
@@ -232,12 +244,22 @@ function populateArrays(){
             }
         }
     }
-    console.log(handArray);
 }
 
 function addHandsToPage(){
-
     var element;
+
+    //add the background divs first
+    for (var i=0; i<=handArray.length-1; i++){
+        if (handArray[i].divId==="container"){
+            element = document.createElement("div");
+            element.className = "handBg";
+            element.innerHTML = '&nbsp;';
+            document.getElementById("BGcontainer").appendChild(element);
+        }
+    }
+
+    //add the hand divs
     for (var i=0; i<=handArray.length-1; i++){
         element = document.createElement("div");
         element.className = "hand";
@@ -366,14 +388,14 @@ function actionVertFlow(ignoreFigures, duration, rndSeed){
 function allVertFlow(ignoreFigures, duration, rndSeed){
     for (var x=0; x<=handArray.length-1; x++){
         if (String(handArray[x].col) === String(intFlowCounter)){
-            if (handArray[i].divId === "container") {
-                $("#hand" + i).rotate({
+            if (handArray[x].divId === "container") {
+                $("#hand" + x).rotate({
                     animateTo: 0,
                     duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine
                 })
             } else {
-                $("#hand" + i).rotate({
+                $("#hand" + x).rotate({
                     animateTo: 180,
                     duration: duration + Math.floor(Math.random() * rndSeed) + 1,
                     easing: $.easing.easeInOutSine

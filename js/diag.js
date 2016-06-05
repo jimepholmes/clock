@@ -13,7 +13,6 @@ function groupDiagOutAll(ignoreFigures){
     }
 }
 
-
 function groupDiag(intGroup, ignoreFigures){
     var boolSkip = false;
     clearInterval(intInterval);
@@ -99,7 +98,6 @@ function groupDiag(intGroup, ignoreFigures){
         }
     }
 }
-
 
 function groupOutDiag(intGroup, ignoreFigures){
     clearInterval(intInterval);
@@ -187,3 +185,60 @@ function groupOutDiag(intGroup, ignoreFigures){
     }
 }
 
+function actionGroupDiagFlow(ignoreFigures, duration, rndSeed){
+    intFlowCounter=1;
+    intInterval = setInterval( function(){ groupDiagFlow(ignoreFigures, duration, rndSeed) }, 200);
+}
+
+function groupDiagFlow(ignoreFigures, duration, rndSeed){
+    for (var x=0; x<=handArray.length-1; x++){
+        if (String(handArray[x].col) === String(intFlowCounter)){
+            if (handArray[x].divId === "container") {
+                $("#hand" + x).rotate({
+                    animateTo: 45,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + x).rotate({
+                    animateTo: 225,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
+        }
+    }
+    intFlowCounter ++;
+    if (intFlowCounter>16){
+        clearInterval(intInterval);
+    }
+}
+
+function actionGroupDiagOutFlow(ignoreFigures, duration, rndSeed){
+    intFlowCounter=1;
+    intInterval = setInterval( function(){ groupDiagOutFlow(ignoreFigures, duration, rndSeed) }, 200);
+}
+
+function groupDiagOutFlow(ignoreFigures, duration, rndSeed){
+    for (var x=0; x<=handArray.length-1; x++){
+        if (String(handArray[x].col) === String(intFlowCounter)){
+            if (handArray[x].divId === "container") {
+                $("#hand" + x).rotate({
+                    animateTo: 315,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            } else {
+                $("#hand" + x).rotate({
+                    animateTo: 135,
+                    duration: duration + Math.floor(Math.random() * rndSeed) + 1,
+                    easing: $.easing.easeInOutSine
+                })
+            }
+        }
+    }
+    intFlowCounter ++;
+    if (intFlowCounter>16){
+        clearInterval(intInterval);
+    }
+}
